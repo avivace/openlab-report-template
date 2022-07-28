@@ -44,7 +44,9 @@ More information on code snippets is available for instance at:
     \item \href{https://repo.skni.umcs.pl/ctan/macros/latex/contrib/minted/minted.pdf}{minted package documentation.}
 \end{itemize}
 
+
 \begin{longlisting}
+\ifprintCode
 \begin{minted}[highlightlines={3}]{python}
 import numpy as np
     
@@ -76,9 +78,11 @@ def incmatrix(genl1,genl2):
     
     return M
 \end{minted}
-\caption{Example code snippet~\cite{code}.}
+\fi
+\caption{Example code snippet~\cite{code}. \texttt{minted} package is required to compile it.}
 \label{code:example}
 \end{longlisting}
+
 
 % Use \section*{REFERENCES} to avoid REFERENCES being shown in the table of contents
 \section{REFERENCES}

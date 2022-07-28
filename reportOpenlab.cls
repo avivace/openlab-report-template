@@ -7,7 +7,6 @@
 
 \RequirePackage[utf8]{inputenc} % Special characters
 \RequirePackage[T1]{fontenc}
-\RequirePackage{siunitx} % Scientific notation (e.g.: \num{2e+9})
 \RequirePackage{float} % Placement of images
 \RequirePackage{graphicx}
 \RequirePackage[justification=centering]{caption} % Caption is centralised
@@ -32,11 +31,35 @@
 \RequirePackage{tikz} % tikz graphics
 \usetikzlibrary{calc,positioning}
 
-\RequirePackage{minted} % code snippets
-\newenvironment{longlisting}{\captionsetup{type=listing}}{} % custom environment that allows to break pages for long code snippets
+% code snippets
+\newboolean{printCode}
+\RequirePackage{ifthen}
+\AtBeginDocument{%
+  \IfFileExists{minted.sty}{%
+    \RequirePackage{minted}%
+    \setboolean{printCode}{true}%
+  }{%
+    \setboolean{printCode}{false}
+    \PackageWarning{reportOpenlab}{%
+      Package minted not available.
+    }%
+  }%
+}
 
-\RequirePackage{sectsty} % Change colour of section titles
-\sectionfont{\color{openlabgreen}}  % sets colour of sections
+\newenvironment{longlisting}{\captionsetup{type=listing}}{} % custom environment that allows to break pages for long code snippets
+% sets colour of sections, subsections, ...
+\renewcommand\section{\@startsection {section}{1}{\z@}%
+                                   {-3.5ex \@plus -1ex \@minus -.2ex}%
+                                   {2.3ex \@plus.2ex}%
+                                   {\normalfont\Large\bfseries\color{openlabgreen}}}
+\renewcommand\subsection{\@startsection {subsection}{1}{\z@}%
+                                   {-3.5ex \@plus -1ex \@minus -.2ex}%
+                                   {2.3ex \@plus.2ex}%
+                                   {\normalfont\large\bfseries\color{openlabgreen}}}
+\renewcommand\subsubsection{\@startsection {subsubsection}{1}{\z@}%
+                                   {-3.5ex \@plus -1ex \@minus -.2ex}%
+                                   {2.3ex \@plus.2ex}%
+                                   {\normalfont\bfseries\color{openlabgreen}}}
 
 \RequirePackage{biblatex} % bibliography
 
