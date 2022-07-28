@@ -8,12 +8,12 @@ It is based on LaTeX `article` class. Minimal customisation has been added to ma
 
 ### Overleaf
 
-To use this template on [Overleaf]((https://www.overleaf.com):
+To use this template on [Overleaf](https://www.overleaf.com):
 
-1. Download this repository as a [zip file](https://github.com/avivace/openlab-report-template/archive/refs/heads/main.zip)
+1. [Download this repository](https://github.com/avivace/openlab-report-template/archive/refs/heads/main.zip) as a zip file
 2. Go on Overleaf, click **New Project** and then **Upload Project**
 3. Select the zip file downloaded in step 1
-4. The report will get compiled and you'll see a live preview on the right :)
+4. You're done! The report will get compiled and you'll see a live preview on the right :) You can start writing your report in the `main.tex` file.
 
 ### Local
 
