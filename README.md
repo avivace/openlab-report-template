@@ -3,7 +3,15 @@ LaTeX template for the project report of CERN Openlab summer students. It is bas
 
 ## How to start
 
-You may use LaTeX locally or via [Overleaf](https://www.overleaf.com), the latter enables to share, review, and comment on the document.
+You may use LaTeX locally, to compile follow the traditional instructions, e.g.:
+
+```bash
+pdflatex main.tex
+biber main
+pdflatex main.tex
+```
+
+You may prefer to write this report online, using [Overleaf](https://www.overleaf.com),. It enables sharing, reviewing, and commenting on the document, as well as feature a live preview.
 
 ## Document structure
 

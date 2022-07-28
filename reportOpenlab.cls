@@ -37,6 +37,7 @@
 \AtBeginDocument{%
   \IfFileExists{minted.sty}{%
     \RequirePackage{minted}%
+    \newenvironment{longlisting}{\captionsetup{type=listing}}{} % custom environment that allows to break pages for long code snippets
     \setboolean{printCode}{true}%
   }{%
     \setboolean{printCode}{false}
@@ -46,7 +47,6 @@
   }%
 }
 
-\newenvironment{longlisting}{\captionsetup{type=listing}}{} % custom environment that allows to break pages for long code snippets
 % sets colour of sections, subsections, ...
 \renewcommand\section{\@startsection {section}{1}{\z@}%
                                    {-3.5ex \@plus -1ex \@minus -.2ex}%
