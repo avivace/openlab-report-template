@@ -1,17 +1,31 @@
 # openlab-report-template
-LaTeX template for the project report of CERN Openlab summer students. It is based on LaTeX `article` class. Minimal customisation has been added to match provided template.
 
-## How to start
+A LaTeX template for the project report of CERN Openlab summer students.
 
-You may use LaTeX locally, to compile follow the traditional instructions, e.g.:
+It is based on LaTeX `article` class. Minimal customisation has been added to match provided template.
+
+## Usage
+
+### Overleaf
+
+To use this template on [Overleaf]((https://www.overleaf.com):
+
+1. Download this repository as a [zip file](https://github.com/avivace/openlab-report-template/archive/refs/heads/main.zip)
+2. Go on Overleaf, click **New Project** and then **Upload Project**
+3. Select the zip file downloaded in step 1
+4. The report will get compiled and you'll see a live preview on the right :)
+
+### Local
+
+Use the traditional instructions, e.g.:
 
 ```bash
-pdflatex main.tex
+pdflatex --shell-escape main.tex
 biber main
-pdflatex main.tex
+pdflatex --shell-escape main.tex
 ```
 
-You may prefer to write this report online, using [Overleaf](https://www.overleaf.com),. It enables sharing, reviewing, and commenting on the document, as well as feature a live preview.
+A `makefile` is also included for convenience. `make pdf` will build the PDF for you, provided you have all the dependencies installed on your system.
 
 ## Document structure
 
@@ -38,3 +52,11 @@ Full structure of this template is placed below. You need to edit `main.tex` pro
 ## Figures, code snippets, bibliography
 
 Examples are given in the template, but please consult LaTeX documentation for further details. For instance, visit [Overleaf webpage](https://www.overleaf.com/learn/latex/Creating_a_document_in_LaTeX).
+
+## Contributing
+
+Contributions are welcome! Please open a PR for any improvoment.
+
+## License
+
+The template is released under the MIT license. CERN and CERN Openlab assets are [© CERN](https://copyright.web.cern.ch/). 
