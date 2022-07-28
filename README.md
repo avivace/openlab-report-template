@@ -7,7 +7,25 @@ You may use LaTeX locally or via [Overleaf](https://www.overleaf.com), the latte
 
 ## Document structure
 
-You need to edit `main.tex` providing details of your project (title, names, specifications, abstract) and the content of the report. Bibliography in BibTeX can be placed in `bibliography.bib`.
+Full structure of this template is placed below. You need to edit `main.tex` providing details of your project (title, names, specifications, abstract) and the content of the report. Bibliography in BibTeX can be placed in `bibliography.bib`.
+
+```bash
+.
+|-- assets
+|   |-- cern_openlab_logo.png
+|   |-- cern_openlab_logo_small.png
+|   |-- example.png
+|   |-- front.png
+|   |-- hline1.png
+|   `-- hline2.png
+|-- bibliography.bib
+|-- main.tex
+|-- README.md
+`-- reportOpenlab.cls
+```
+
+`reportOpenlab.cls` and `assets` contain customisation of LaTeX article to CERN openlab theme.
+
 
 ## Figures, code snippets, bibliography
 

@@ -33,13 +33,7 @@
 \usetikzlibrary{calc,positioning}
 
 \RequirePackage{minted} % code snippets
-\RequirePackage[smartEllipses]{markdown} % include markdown
-\markdownSetup{
-  renderers = {
-    link     = {#1},        % Render a link as the link label.
-    emphasis = {\emph{#1}}, % Render emphasis using `\emph`.
-  }
-}
+\newenvironment{longlisting}{\captionsetup{type=listing}}{} % custom environment that allows to break pages for long code snippets
 
 \RequirePackage{sectsty} % Change colour of section titles
 \sectionfont{\color{openlabgreen}}  % sets colour of sections

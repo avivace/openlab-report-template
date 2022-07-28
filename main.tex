@@ -1,6 +1,5 @@
 \documentclass{reportOpenlab} % custom style based on LaTeX article
 \addbibresource{bibliography.bib} % path to bibliography file
-
 \begin{document}
 
 %--------------------- Define project ------------------------
@@ -22,14 +21,8 @@
 
 %--------------------- Include main content ------------------------
 
-\markdownInput{README.md} % Example on how to include markdown
-
-\subsection{More}
-
-More information on how to include content of markdown files is available for instance at \url{https://www.overleaf.com/learn/how-to/Writing_Markdown_in_LaTeX_Documents}
-
 \section{INTRODUCTION}
-Introduction to your project.
+Introduction to your project. Example is presented in Figure~\ref{fig:example}.
 
 \begin{figure}[h]
 \centering
@@ -38,14 +31,20 @@ Introduction to your project.
 \label{fig:example}
 \end{figure}
 
-Example is presented in Fig.~\ref{fig:example}.
-
+\subsection{More}
 More information is available for instance at \url{https://www.overleaf.com/learn/latex/Inserting_Images}.
 
 \section{TWO}
-Another section.
+Another section. Custom environment \texttt{longlisting} used in Listing~\ref{code:example} enables page breaks within the code snippet.
 
-\begin{listing}[!ht]
+\subsection{More}
+More information on code snippets is available for instance at:
+\begin{itemize}
+    \item \url{https://www.overleaf.com/learn/latex/Code_Highlighting_with_minted},
+    \item \href{https://repo.skni.umcs.pl/ctan/macros/latex/contrib/minted/minted.pdf}{minted package documentation.}
+\end{itemize}
+
+\begin{longlisting}
 \begin{minted}[highlightlines={3}]{python}
 import numpy as np
     
@@ -78,17 +77,14 @@ def incmatrix(genl1,genl2):
     return M
 \end{minted}
 \caption{Example code snippet~\cite{code}.}
-\end{listing}
+\label{code:example}
+\end{longlisting}
 
-More information on code snippets is available for instance at:
-\begin{itemize}
-    \item \url{https://www.overleaf.com/learn/latex/Code_Highlighting_with_minted},
-    \item \href{https://repo.skni.umcs.pl/ctan/macros/latex/contrib/minted/minted.pdf}{Package documentation.}
-\end{itemize}
-
-\section*{REFERENCES}
+% Use \section*{REFERENCES} to avoid REFERENCES being shown in the table of contents
+\section{REFERENCES}
 \printbibliography[heading=none]
 
-More information on bibliography is available for instance at \url{https://www.overleaf.com/learn/latex/Bibliography_management_with_biblatex}.}}
+\subsection{More}
+More information on bibliography is available for instance at \url{https://www.overleaf.com/learn/latex/Bibliography_management_with_biblatex}.
 
 \end{document}
